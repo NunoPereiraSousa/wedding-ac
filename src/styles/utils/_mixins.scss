@@ -1,0 +1,15 @@
+@mixin figure($height, $width) {
+  height: $height;
+  // overflow: hidden;
+  position: relative;
+  width: $width;
+}
+
+%image-cover {
+  height: 100%;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

@@ -1,0 +1,909 @@
+.hero {
+  padding-top: 14rem;
+  position: relative;
+
+  @include media("<phone") {
+    padding: 10rem 2rem 0;
+  }
+}
+
+.hero-vector {
+  position: absolute;
+  left: 0;
+  top: 8rem;
+  height: auto;
+  width: 30.6rem;
+
+  @include media("<=tablet") {
+    width: 16rem;
+  }
+
+  @include media("<phone") {
+    width: 9rem;
+    top: 20rem;
+  }
+}
+
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+
+  @include media("<phone") {
+    gap: 4rem;
+  }
+}
+
+.wrapper {
+  max-width: 144rem;
+  margin: auto;
+}
+
+.hero-headline {
+  @extend %heading-74;
+
+  color: $color-green;
+  text-align: center;
+
+  span {
+    color: $color-yellow;
+  }
+}
+
+.hero-figure {
+  @include figure(30.4rem, 23.6rem);
+
+  margin: auto;
+  animation: scaleAnimation 1.5s infinite ease-in-out;
+
+  @include media("<phone") {
+    @include figure(20.4rem, 13.6rem);
+  }
+}
+
+.hero-image {
+  @extend %image-cover;
+}
+
+.hero-label {
+  @extend %heading-74;
+
+  color: $color-green;
+  max-width: 80rem;
+  margin: auto;
+  text-align: center;
+
+  span {
+    color: $color-yellow;
+  }
+
+  @include media("<=tablet") {
+    max-width: 50rem;
+  }
+
+  @include media("<phone") {
+    margin-top: 10rem;
+  }
+}
+
+/* GALLERY STYLES */
+
+.gallery {
+  position: relative;
+  padding: 20rem 0;
+
+  @include media("<phone") {
+    padding: 20rem 2rem 10rem;
+  }
+}
+
+.gallery-wrapper {
+}
+
+.gallery-headline {
+  @extend %heading-60;
+
+  color: $color-green;
+  max-width: 77rem;
+  margin: auto;
+  text-align: center;
+
+  span {
+    color: $color-yellow;
+  }
+
+  @include media("<=tablet") {
+    max-width: 60rem;
+  }
+
+  @include media("<phone") {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.gallery-vector {
+  position: absolute;
+  right: 10rem;
+  top: 10rem;
+  height: auto;
+  width: 17.6rem;
+
+  @include media("<=tablet") {
+    width: 10.6rem;
+    right: 2rem;
+  }
+
+  @include media("<phone") {
+    top: -2rem;
+    right: 1rem;
+    width: 9rem;
+  }
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: center;
+  justify-items: center;
+  column-gap: 12rem;
+  margin-top: 8rem;
+  row-gap: 8rem;
+
+  @include media("<=tablet") {
+    grid-template-columns: 1fr;
+    row-gap: 8rem;
+  }
+
+  @include media("<phone") {
+    row-gap: 4rem;
+  }
+}
+
+.gallery-card {
+  border-radius: 0.4rem;
+  background-color: $color-light-green;
+  padding: 1.4rem;
+  width: fit-content;
+  height: fit-content;
+
+  &:nth-child(odd) {
+    margin-top: 6rem;
+    transform: rotate(-2deg);
+
+    @include media("<=tablet") {
+      margin-top: 0;
+      transform: rotate(-2deg) translateX(10rem);
+    }
+
+    @include media("<phone") {
+      transform: rotate(-2deg) translateX(0);
+    }
+  }
+
+  &:nth-child(even) {
+    transform: rotate(2deg);
+
+    @include media("<=tablet") {
+      transform: rotate(2deg) translateX(-10rem);
+    }
+
+    @include media("<phone") {
+      transform: rotate(2deg) translateX(0);
+    }
+  }
+}
+
+.gallery-card-figure {
+  @include figure(44rem, 36rem);
+
+  @include media("<phone") {
+    @include figure(44rem, calc(100vw - 8rem));
+  }
+}
+
+.gallery-card-image {
+  @extend %image-cover;
+}
+
+.gallery-card-footer {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.4rem;
+  text-transform: uppercase;
+}
+
+.gallery-card-label {
+  @extend %paragraph-24;
+
+  color: $color-white;
+}
+
+.date {
+  padding-bottom: 20rem;
+
+  @include media("<=tablet") {
+    padding: 0 2rem 30rem;
+  }
+
+  @include media("<phone") {
+    padding: 0 2rem 22rem;
+  }
+}
+
+.date-wrapper {
+}
+
+.date-headline {
+  @extend %heading-60;
+
+  color: $color-green;
+  max-width: 82rem;
+  margin: auto;
+  text-align: center;
+
+  @include media("<=tablet") {
+    max-width: 60rem;
+  }
+
+  @include media("<phone") {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.date-wrapper {
+}
+
+.date-container {
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 6.6rem;
+
+  @include media("<=tablet") {
+    flex-direction: column;
+    gap: 17rem;
+  }
+}
+
+.date-video-wrapper {
+  @include figure(40rem, 40rem);
+
+  @include media("<=tablet") {
+    @include figure(34rem, 34rem);
+  }
+
+  @include media("<phone") {
+    @include figure(24rem, 80%);
+  }
+}
+
+.date-video {
+  @extend %image-cover;
+}
+
+.date-content {
+  display: flex;
+  gap: 3.4rem;
+
+  @include media("<phone") {
+    gap: 1.4rem;
+  }
+}
+
+.date-content-box {
+  position: relative;
+}
+
+.date-content-number {
+  @extend %heading-48;
+
+  background-color: $color-yellow;
+  border-radius: 1.6rem;
+  color: $color-white;
+  padding: 4rem 3rem 2.2rem;
+  line-height: 1;
+}
+
+.date-content-box-info {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  width: max-content;
+
+  &.first {
+    right: -5rem;
+
+    @include media("<phone") {
+      right: -2.5rem;
+    }
+  }
+
+  &.second {
+    top: -18rem;
+    left: 4rem;
+
+    @include media("<=tablet") {
+      top: -16rem;
+      left: 0;
+    }
+
+    @include media("<phone") {
+      top: -13rem;
+      left: -2rem;
+    }
+  }
+
+  &.third {
+    align-items: flex-end;
+    flex-direction: row;
+    left: 4rem;
+
+    @include media("<=tablet") {
+      bottom: -10rem;
+    }
+
+    @include media("<phone") {
+      align-items: center;
+      flex-direction: column;
+      left: auto;
+      right: -2rem;
+      top: 9rem;
+    }
+  }
+
+  p {
+    @extend %paragraph-18;
+
+    text-align: center;
+
+    &.first {
+      max-width: 23.2rem;
+
+      @include media("<phone") {
+        max-width: 12.2rem;
+      }
+    }
+
+    &.second {
+      max-width: 16rem;
+      transform: translateX(3rem);
+    }
+
+    &.third {
+      max-width: 17.2rem;
+      transform: translateY(3rem);
+
+      @include media("<phone") {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+
+.date-content-arrow-right-2 {
+  display: none;
+
+  @include media("<phone") {
+    display: block;
+  }
+}
+
+.date-content-arrow-right {
+  display: block;
+
+  @include media("<phone") {
+    display: none;
+  }
+}
+
+.catch {
+  position: relative;
+  padding: 0 0 20rem;
+
+  @include media("<=tablet") {
+    padding: 0 2rem 20rem;
+  }
+
+  @include media("<phone") {
+    padding: 0 2rem 14rem;
+  }
+}
+
+.catch-wrapper {
+}
+
+.catch-headline {
+  @extend %heading-60;
+
+  color: $color-yellow;
+  text-align: center;
+  position: relative;
+}
+
+.catch-label {
+  max-width: 64.2rem;
+  text-align: center;
+  margin: 3rem auto 0;
+
+  @include media("<phone") {
+    margin: 3rem auto 0;
+  }
+}
+
+.catch-video {
+  position: absolute;
+  right: 30rem;
+  bottom: 6rem;
+  width: 36rem;
+  height: 36rem;
+  z-index: -1;
+
+  @include media("<=tablet") {
+    width: 22rem;
+    height: 22rem;
+    right: 2rem;
+    bottom: 20rem;
+  }
+
+  @include media("<phone") {
+    width: 17rem;
+    height: 17rem;
+    right: -3rem;
+    bottom: 0rem;
+  }
+}
+
+.ceremony {
+  padding-bottom: 20rem;
+  position: relative;
+
+  @include media("<=tablet") {
+    padding: 0 2rem 20rem;
+  }
+
+  @include media("<phone") {
+    padding: 0 2rem 10rem;
+  }
+}
+
+.ceremony-wrapper {
+}
+
+.ceremony-headline {
+  @extend %heading-60;
+
+  color: $color-yellow;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.ceremony-label {
+  @extend %heading-28;
+
+  color: $color-green;
+  margin: 0 auto 8rem;
+  text-align: center;
+}
+
+.ceremony-vector {
+  position: absolute;
+  left: 0;
+  top: 4rem;
+  width: 31rem;
+  height: auto;
+
+  @include media("<=tablet") {
+    width: 12rem;
+  }
+
+  @include media("<phone") {
+    width: 8rem;
+    top: 12rem;
+  }
+}
+
+.ceremony-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+
+  @include media("<=tablet") {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.ceremony-image {
+  width: 40.2rem;
+  height: auto;
+
+  @include media("<=tablet") {
+    width: 30.2rem;
+  }
+
+  @include media("<phone") {
+    width: 60%;
+  }
+}
+
+.ceremony-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include media("<phone") {
+    text-align: center;
+    gap: 2rem;
+  }
+}
+
+.ceremony-info-paragraph {
+  max-width: 60.2rem;
+
+  @include media("<=tablet") {
+    width: 100%;
+  }
+
+  @include media("<phone") {
+    max-width: none;
+  }
+}
+
+.ceremony-info-title {
+  @extend %heading-28;
+
+  color: $color-green;
+}
+
+.ceremony-info-paragraph {
+  @extend %paragraph-24;
+}
+
+.ceremony-info-map-wrapper {
+  display: flex;
+  gap: 6rem;
+
+  @include media("<phone") {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
+.ceremony-info-map-title {
+  @extend %heading-28;
+
+  margin-bottom: 1.6rem;
+
+  @include media("<phone") {
+    margin-bottom: 0;
+    margin-top: 3rem;
+  }
+}
+
+.ceremony-info-map-label {
+  @extend %paragraph-24;
+}
+
+.ceremony-map {
+  height: 24.8rem;
+  width: 30.2rem;
+
+  @include media("<phone") {
+    width: 100%;
+  }
+}
+
+.party {
+  padding-bottom: 20rem;
+
+  @include media("<=tablet") {
+    padding: 0 2rem 20rem;
+  }
+
+  @include media("<phone") {
+    padding: 0 2rem 10rem;
+  }
+}
+
+.party-wrapper {
+}
+
+.party-headline {
+  @extend %heading-60;
+
+  color: $color-yellow;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.party-label {
+  @extend %heading-28;
+
+  color: $color-green;
+  margin: 0 auto 8rem;
+  text-align: center;
+}
+
+.party-container {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  gap: 7rem;
+
+  @include media("<=tablet") {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.party-video {
+  width: 50.2rem;
+  height: auto;
+
+  @include media("<=tablet") {
+    width: 40.2rem;
+  }
+
+  @include media("<phone") {
+    width: 90%;
+  }
+}
+
+.party-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include media("<phone") {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.party-info-paragraph {
+  max-width: 60.2rem;
+  text-align: right;
+
+  @include media("<phone") {
+    max-width: none;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.party-info-title {
+  @extend %heading-28;
+
+  color: $color-green;
+  text-align: right;
+
+  @include media("<phone") {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.party-info-paragraph {
+  @extend %paragraph-24;
+  text-align: right;
+
+  @include media("<phone") {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.party-info-map-wrapper {
+  display: flex;
+  gap: 6rem;
+
+  @include media("<phone") {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+}
+
+.party-info-map-title {
+  @extend %heading-28;
+
+  margin-bottom: 1.6rem;
+  text-align: right;
+
+  @include media("<phone") {
+    margin-bottom: 0;
+    margin-top: 3rem;
+    text-align: center;
+  }
+}
+
+.party-info-map-label {
+  @extend %paragraph-24;
+
+  text-align: right;
+
+  @include media("<phone") {
+    text-align: center;
+  }
+}
+
+.party-map {
+  height: 24.8rem;
+  width: 30.2rem;
+
+  @include media("<phone") {
+    width: 100%;
+  }
+}
+
+.end {
+  padding-bottom: 30rem;
+  position: relative;
+
+  @include media("<=tablet") {
+    padding: 0 2rem 30rem;
+  }
+}
+
+.end-wrapper {
+}
+
+.end-headline {
+  @extend %heading-48;
+
+  color: $color-yellow;
+  text-align: center;
+  margin: 0 auto 2rem;
+}
+
+.end-label {
+  @extend %heading-28;
+
+  color: $color-green;
+  text-align: center;
+  margin: auto;
+
+  @include media("<=tablet") {
+    width: 90%;
+  }
+
+  @include media("<phone") {
+    width: 100%;
+  }
+}
+
+.end-button {
+  background-color: $color-green;
+  cursor: pointer;
+  display: block;
+  margin: 6rem auto 10rem;
+  background-color: $color-green;
+  border-radius: 0.4rem;
+  color: $color-white;
+  max-width: 85.4rem;
+  padding: 1.4rem 2rem;
+  width: fit-content;
+  transition: all 0.4s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  @include media("<phone") {
+    margin: 3rem auto 4rem;
+  }
+}
+
+.end-headline-2 {
+  @extend %heading-48;
+
+  color: $color-yellow;
+  text-align: center;
+  margin: 0 auto 4rem;
+}
+
+.end-label-2 {
+  @extend %heading-28;
+
+  color: $color-green;
+  text-align: center;
+  margin: auto;
+  max-width: 85.4rem;
+
+  @include media("<=tablet") {
+    width: 90%;
+    max-width: none;
+  }
+
+  @include media("<phone") {
+    width: 100%;
+  }
+}
+
+.end-number {
+  @extend %heading-48;
+
+  background-color: $color-yellow;
+  border-radius: 1.4rem;
+  color: $color-white;
+  margin: 4rem auto 24rem;
+  padding: 2rem 2rem 1rem;
+  text-align: center;
+  width: fit-content;
+
+  @include media("<=tablet") {
+    margin: 4rem auto 12rem;
+  }
+}
+
+.end-big-title {
+  @extend %heading-48;
+
+  color: $color-green;
+  text-align: center;
+  margin: auto;
+}
+
+.end-copyright {
+  @extend %heading-28;
+
+  color: $color-yellow;
+  text-align: center;
+  margin: auto;
+}
+
+.end-video {
+  position: absolute;
+  left: 20rem;
+  bottom: 45rem;
+  height: auto;
+  width: 30rem;
+  z-index: -1;
+
+  @include media("<=tablet") {
+    bottom: 10rem;
+    width: 20rem;
+    left: 2rem;
+  }
+
+  @include media("<phone") {
+    width: 16rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 4rem;
+  }
+}
+
+.end-tree {
+  position: absolute;
+  right: 0;
+  bottom: 10rem;
+  height: 96rem;
+
+  @include media("<=tablet") {
+    height: auto;
+    width: 20rem;
+    bottom: 0rem;
+  }
+
+  @include media("<phone") {
+    width: 10rem;
+    bottom: 26rem;
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

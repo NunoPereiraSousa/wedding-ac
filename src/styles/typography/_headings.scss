@@ -1,0 +1,67 @@
+%heading-74 {
+  font-size: 7.4rem;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  @include media("<=tablet") {
+    font-size: 4rem;
+  }
+
+  @include media("<phone") {
+    font-size: 3.6rem;
+  }
+}
+
+%heading-60 {
+  font-size: 6rem;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  @include media("<=tablet") {
+    font-size: 5rem;
+  }
+
+  @include media("<phone") {
+    font-size: 3rem;
+  }
+}
+
+%heading-48 {
+  font-size: 4.8rem;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  @include media("<=tablet") {
+    font-size: 3.8rem;
+  }
+
+  @include media("<phone") {
+    font-size: 2.4rem;
+  }
+}
+
+%heading-28 {
+  font-size: 2.8rem;
+  font-family: $font;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  text-transform: uppercase;
+
+  @include media("<=tablet") {
+    font-size: 2.6rem;
+  }
+
+  @include media("<phone") {
+    font-size: 2.4rem;
+  }
+}
