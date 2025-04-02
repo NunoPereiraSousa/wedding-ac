@@ -30,7 +30,7 @@ export default function Home() {
     gsap.to(".preloader", {
       opacity: 0,
       duration: 1,
-      delay: 2.5,
+      delay: 3,
       onComplete: () => {
         document.documentElement.style.overflow = "auto";
         document.body.style.overflow = "auto";

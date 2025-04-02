@@ -25,7 +25,7 @@
   width: 100%;
   height: auto;
 
-  // opacity: 0;
+  opacity: 0;
 }
 
 .preloader-text-1 {
@@ -42,7 +42,7 @@
     top: 2rem;
   }
 
-  // opacity: 0;
+  opacity: 0;
 }
 
 .preloader-text-2 {
@@ -59,7 +59,7 @@
     top: 2rem;
   }
 
-  // opacity: 0;
+  opacity: 0;
 }
 
 .preloader-text-3 {
@@ -76,7 +76,7 @@
     bottom: 2rem;
   }
 
-  // opacity: 0;
+  opacity: 0;
 }
 
 .preloader-text-4 {
@@ -93,7 +93,7 @@
     bottom: 2rem;
   }
 
-  // opacity: 0;
+  opacity: 0;
 }
 
 .cta {
@@ -114,8 +114,10 @@
   transform: translateX(-50%);
   z-index: 10;
 
-  font-size: 1.6rem;
-  line-height: 1.2;
+  @include media("<=tablet") {
+    font-size: 1.6rem;
+    line-height: 1.2;
+  }
 
   &:hover {
     transform: scale(1.05);
