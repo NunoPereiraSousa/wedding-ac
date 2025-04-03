@@ -11,6 +11,17 @@ import mosteiro from "../../public/assets/mosteiro.png";
 import borboletas from "../../public/assets/borboletas.png";
 import plantaDireita from "../../public/assets/planta-direita.png";
 import preloader from "../../public/assets/preloader.png";
+import Porto16 from "../../public/assets/porto-16.jpeg";
+import Porto17 from "../../public/assets/porto-17.jpeg";
+import lisboa18 from "../../public/assets/lisboa-18.jpeg";
+import perth from "../../public/assets/perth-19.jpeg";
+import london20 from "../../public/assets/londres-20.jpeg";
+import lisbon21 from "../../public/assets/lisboa-21.jpeg";
+import sj from "../../public/assets/sj-2023.jpeg";
+import palma23 from "../../public/assets/palma-23.jpeg";
+import london23 from "../../public/assets/londres-23.jpeg";
+import palma24 from "../../public/assets/palma-24.jpeg";
+import porto25 from "../../public/assets/porto-25.jpeg";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -99,12 +110,67 @@ export default function Home() {
           <div className="gallery-grid">
             <div className="gallery-card">
               <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
+                <Image src={Porto16} alt="RJ" className="gallery-card-image" />
               </figure>
 
               <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
+                <p className="gallery-card-label">Porto</p>
+                <p className="gallery-card-label">2016</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={Porto17} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Porto</p>
+                <p className="gallery-card-label">2017</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={lisboa18} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Lisboa</p>
+                <p className="gallery-card-label">2018</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={perth} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Perth</p>
+                <p className="gallery-card-label">2019</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={london20} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Londres</p>
+                <p className="gallery-card-label">2020</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={lisbon21} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Lisboa</p>
+                <p className="gallery-card-label">2021</p>
               </div>
             </div>
 
@@ -115,95 +181,62 @@ export default function Home() {
 
               <div className="gallery-card-footer">
                 <p className="gallery-card-label">Rio de Janeiro</p>
+                <p className="gallery-card-label">2022</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={sj} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">São João</p>
+                <p className="gallery-card-label">2023</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={palma23} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Palma</p>
+                <p className="gallery-card-label">2023</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={london23} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Londres</p>
+                <p className="gallery-card-label">2023</p>
+              </div>
+            </div>
+
+            <div className="gallery-card">
+              <figure className="gallery-card-figure">
+                <Image src={palma24} alt="RJ" className="gallery-card-image" />
+              </figure>
+
+              <div className="gallery-card-footer">
+                <p className="gallery-card-label">Palma</p>
                 <p className="gallery-card-label">2024</p>
               </div>
             </div>
 
             <div className="gallery-card">
               <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
+                <Image src={porto25} alt="RJ" className="gallery-card-image" />
               </figure>
 
               <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
-              </div>
-            </div>
-
-            <div className="gallery-card">
-              <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
-              </figure>
-
-              <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
-              </div>
-            </div>
-
-            <div className="gallery-card">
-              <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
-              </figure>
-
-              <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
-              </div>
-            </div>
-
-            <div className="gallery-card">
-              <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
-              </figure>
-
-              <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
-              </div>
-            </div>
-
-            <div className="gallery-card">
-              <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
-              </figure>
-
-              <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
-              </div>
-            </div>
-
-            <div className="gallery-card">
-              <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
-              </figure>
-
-              <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
-              </div>
-            </div>
-
-            <div className="gallery-card">
-              <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
-              </figure>
-
-              <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
-              </div>
-            </div>
-
-            <div className="gallery-card">
-              <figure className="gallery-card-figure">
-                <Image src={rj} alt="RJ" className="gallery-card-image" />
-              </figure>
-
-              <div className="gallery-card-footer">
-                <p className="gallery-card-label">Rio de Janeiro</p>
-                <p className="gallery-card-label">2024</p>
+                <p className="gallery-card-label">Porto</p>
+                <p className="gallery-card-label">2025</p>
               </div>
             </div>
           </div>
