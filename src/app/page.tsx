@@ -22,10 +22,11 @@ import palma23 from "../../public/assets/palma-23.jpeg";
 import london23 from "../../public/assets/londres-23.jpeg";
 import palma24 from "../../public/assets/palma-24.jpeg";
 import porto25 from "../../public/assets/porto-25.jpeg";
-
+import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import BackgroundAudio from "./audio";
+
+const AudioComponent = dynamic(() => import("./audio"), { ssr: false });
 
 export default function Home() {
   useGSAP(() => {
@@ -66,7 +67,7 @@ export default function Home() {
         </div>
       </div>
 
-      <BackgroundAudio />
+      <AudioComponent />
 
       <a
         className="cta"
