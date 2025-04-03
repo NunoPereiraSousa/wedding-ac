@@ -34,6 +34,10 @@ export default function Home() {
       onComplete: () => {
         document.documentElement.style.overflow = "auto";
         document.body.style.overflow = "auto";
+        const preloader = document.querySelector(".preloader");
+        if (preloader) {
+          preloader.remove();
+        }
       },
     });
   });
@@ -50,7 +54,13 @@ export default function Home() {
         </div>
       </div>
 
-      <button className="cta">Confirmar presença</button>
+      <a
+        className="cta"
+        href="https://forms.gle/YJDR978shABFii5P6"
+        target="_blank"
+      >
+        Confirmar presença
+      </a>
 
       <section className="hero">
         <Image src={plantaEsquerda} alt="Palmeira" className="hero-vector" />
@@ -300,7 +310,7 @@ export default function Home() {
 
             <div className="ceremony-info">
               <p className="ceremony-info-paragraph">
-                A CERIMÓNIA terá lugar no
+                A cerimónia terá lugar no
               </p>
 
               <h5 className="ceremony-info-title">
@@ -378,7 +388,13 @@ export default function Home() {
             Confirmem a vossa presença para celebrarmos juntos
           </p>
 
-          <a className="end-button">Claro que sim!</a>
+          <a
+            className="end-button"
+            href="https://forms.gle/YJDR978shABFii5P6"
+            target="_blank"
+          >
+            Claro que sim!
+          </a>
 
           <h3 className="end-headline-2">presente</h3>
 
