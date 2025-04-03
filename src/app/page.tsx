@@ -25,6 +25,7 @@ import porto25 from "../../public/assets/porto-25.jpeg";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import BackgroundAudio from "./audio";
 
 export default function Home() {
   useGSAP(() => {
@@ -64,6 +65,8 @@ export default function Home() {
           <Image src={preloader} alt="Preloader" className="preloader-image" />
         </div>
       </div>
+
+      <BackgroundAudio />
 
       <a
         className="cta"
@@ -191,7 +194,7 @@ export default function Home() {
               </figure>
 
               <div className="gallery-card-footer">
-                <p className="gallery-card-label">São João</p>
+                <p className="gallery-card-label">Porto | São João</p>
                 <p className="gallery-card-label">2023</p>
               </div>
             </div>
@@ -251,18 +254,16 @@ export default function Home() {
           </h3>
 
           <div className="date-container">
-            <div className="date-video-wrapper">
-              <video
-                width="600"
-                loop
-                autoPlay
-                muted
-                playsInline
-                className="date-video"
-              >
-                <source src="/assets/leopardo.mp4" type="video/mp4" />
-              </video>
-            </div>
+            <video
+              width="600"
+              loop
+              autoPlay
+              muted
+              playsInline
+              className="date-video"
+            >
+              <source src="/assets/leopardo.mp4" type="video/mp4" />
+            </video>
 
             <div className="date-content">
               <div className="date-content-box">
@@ -336,7 +337,7 @@ export default function Home() {
           />
 
           <h3 className="ceremony-headline">A CERIMÓNIA</h3>
-          <p className="ceremony-label">26.06.2025 | 14h30</p>
+          <p className="ceremony-label">23.06.2025 | 14h30</p>
 
           <div className="ceremony-container">
             <Image src={mosteiro} alt="Mosteiro" className="ceremony-image" />
@@ -377,7 +378,7 @@ export default function Home() {
       <section className="party">
         <div className="party-wrapper wrapper">
           <h3 className="party-headline">O copo-de-água</h3>
-          <p className="party-label">26.06.2025 | 16h30</p>
+          <p className="party-label">23.06.2025 | 16h30</p>
 
           <div className="party-container">
             <div className="party-info">

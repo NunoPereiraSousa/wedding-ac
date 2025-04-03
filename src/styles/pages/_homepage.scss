@@ -272,20 +272,19 @@
   }
 }
 
-.date-video-wrapper {
-  @include figure(40rem, 40rem);
+.date-video {
+  height: 40rem;
+  width: 40rem;
 
   @include media("<=tablet") {
-    @include figure(34rem, 34rem);
+    height: 34rem;
+    width: 34rem;
   }
 
   @include media("<phone") {
-    @include figure(24rem, 80%);
+    height: 24rem;
+    width: 80%;
   }
-}
-
-.date-video {
-  @extend %image-cover;
 }
 
 .date-content {
