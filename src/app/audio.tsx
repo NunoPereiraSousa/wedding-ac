@@ -1,24 +1,23 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { VolumeMuteFill, VolumeUpFill } from "react-bootstrap-icons";
 
 export default function BackgroundAudio() {
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [audio] = useState(() => new Audio("/assets/birds.mp3"));
+  const [isPlaying, setIsPlaying] = useState(false);
 
-  useEffect(() => {
-    const handleInteraction = () => {
-      if (!audio) {
-        const newAudio = new Audio("/assets/birds.mp3");
-        newAudio.loop = true;
-        newAudio.play();
-        setAudio(newAudio);
-      } else {
-        audio.play();
-      }
-      document.removeEventListener("click", handleInteraction);
-    };
+  const toggleAudio = () => {
+    if (isPlaying) {
+      audio.pause();
+    } else {
+      audio.loop = true;
+      audio.play().catch((err) => console.error("Autoplay blocked:", err));
+    }
+    setIsPlaying(!isPlaying);
+  };
 
-    document.addEventListener("click", handleInteraction);
-    return () => document.removeEventListener("click", handleInteraction);
-  }, [audio]);
-
-  return null;
+  return (
+    <button onClick={toggleAudio} className="audio-button">
+      {isPlaying ? <VolumeUpFill size={24} /> : <VolumeMuteFill size={24} />}
+    </button>
+  );
 }

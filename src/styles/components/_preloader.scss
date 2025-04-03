@@ -119,3 +119,19 @@
     line-height: 1.2;
   }
 }
+
+.audio-button {
+  background-color: $color-yellow;
+  color: $color-white;
+  border-radius: 50% 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem 1rem 1.4rem;
+  cursor: pointer;
+
+  position: fixed;
+  right: 0;
+  top: 20rem;
+  z-index: 11;
+}
