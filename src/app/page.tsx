@@ -71,7 +71,7 @@ export default function Home() {
 
       <a
         className="cta"
-        href="https://forms.gle/YJDR978shABFii5P6"
+        href="https://forms.gle/qq77MjVh8b44wtek9"
         target="_blank"
       >
         Confirmar presença
@@ -425,7 +425,7 @@ export default function Home() {
 
           <a
             className="end-button"
-            href="https://forms.gle/YJDR978shABFii5P6"
+            href="https://forms.gle/qq77MjVh8b44wtek9"
             target="_blank"
           >
             Claro que sim!
